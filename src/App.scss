@@ -1,0 +1,54 @@
+@import "./scss/_variable";
+
+html {
+     box-sizing: border-box;
+     background-color: $activeClr;
+     scroll-behavior: smooth;
+     transition: 0.35s ease-out;
+}
+* {
+     margin: 0;
+     padding: 0;
+}
+*,
+*:before,
+*:after {
+     box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+     outline: none;
+}
+input {
+     line-height: normal;
+}
+label,
+button {
+     cursor: pointer;
+}
+a {
+     text-decoration: none;
+}
+img {
+     display: block;
+     max-width: 100%;
+}
+.btn__top {
+     font-size: 50px;
+     background-color: transparent;
+     border: none;
+     color: rgb(52, 163, 0);
+     position: fixed;
+     bottom: 50px;
+     right: 50px;
+     display: none;
+     &:hover {
+          opacity: 0.8;
+     }
+}
+.show {
+     display: block !important;
+     cursor: pointer;
+}

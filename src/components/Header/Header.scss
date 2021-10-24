@@ -1,0 +1,89 @@
+@import "../../scss/_variable";
+#header {
+     position: fixed !important;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 999;
+     height: 60px;
+     background-color: $mainClr;
+     @include flex(center);
+     @media screen and (max-width: 767px) {
+          justify-content: flex-start;
+     }
+}
+.header__bar {
+     color: $activeClr;
+     font-size: 30px;
+     padding-right: 20px;
+     cursor: pointer;
+     display: none;
+     position: fixed;
+     right: 40px;
+     @media screen and (max-width: 767px) {
+          display: block;
+     }
+}
+.header__list.active {
+     transform: scaleY(1);
+}
+.header__list {
+     @include flex(center);
+     text-decoration: none;
+     list-style: none;
+     gap: 30px;
+     transition: 0.2s ease;
+     @media screen and (max-width: 767px) {
+          transform-origin: 50% 0;
+          transform: scaleY(0.001);
+          flex-direction: column;
+          background-color: $mainClr;
+          opacity: 0.9;
+          width: 100%;
+          margin-top: 400px;
+          gap: 0px;
+     }
+
+     &--logo {
+          width: 45px;
+          height: 45px;
+     }
+     &--item {
+          cursor: pointer;
+          font-size: 15px;
+          color: white;
+          font-weight: 500;
+          line-height: 50px;
+          position: relative;
+
+          @media screen and (max-width: 767px) {
+               // display: none;
+          }
+          &:after {
+               content: "";
+               position: absolute;
+               bottom: -5px;
+               left: 0;
+               width: 0%;
+               background-color: $hoverClr;
+               height: 2px;
+               border-radius: 100rem;
+               transition: 0.45s ease;
+          }
+
+          &:hover {
+               color: $hoverClr;
+               &:after {
+                    width: 70%;
+               }
+          }
+     }
+     &--item.active {
+          color: $activeClr;
+          position: relative;
+
+          &:after {
+               width: 70%;
+          }
+     }
+}

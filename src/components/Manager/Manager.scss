@@ -1,0 +1,57 @@
+@import "../../scss/_variable";
+#manager {
+     width: 100%;
+     flex-direction: column;
+     @include flex(center);
+}
+.ma__container {
+     @include flex(center);
+     flex-wrap: wrap;
+     gap: 40px;
+     width: 90%;
+}
+.ma {
+     &__name {
+          color: $mainClr;
+          font-size: 18px;
+     }
+     &__position {
+          margin-top: -10px;
+          font-size: 14px;
+     }
+     &__icon {
+          transition: 0.35s ease;
+          font-size: 30px;
+          color: $mainClr;
+          &:hover {
+               color: rgb(0, 158, 197);
+          }
+     }
+     &__content {
+          @include flex(around);
+          flex-direction: column;
+          flex: 1;
+     }
+     &__box {
+          border-radius: 10px;
+          overflow: hidden;
+          @include flex(between);
+          flex-direction: column;
+          min-width: 330px;
+          height: 380px;
+          box-shadow: 0 0 10px $mainClr;
+          transition: 0.35s ease;
+          &:hover {
+               transform: translateY(-10px);
+               box-shadow: 0 0 30px $mainClr;
+          }
+     }
+     &__img {
+          position: relative;
+          width: 100%;
+          height: 280px;
+          & img {
+               @include abs(full);
+          }
+     }
+}

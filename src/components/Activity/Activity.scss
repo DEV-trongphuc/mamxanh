@@ -1,0 +1,73 @@
+@import "../../scss/_variable";
+#activity,
+#activityClub {
+     margin-top: 50px;
+     @include flex(center);
+     flex-direction: column;
+}
+.ac {
+     padding: 0px 20px;
+     &__container {
+          @include flex(center);
+          flex-wrap: wrap;
+          width: 80%;
+          gap: 20px;
+          @media screen and (max-width: 1280px) {
+               gap: 40px;
+          }
+          @media screen and (max-width: 950px) {
+               gap: 20px;
+          }
+     }
+     &__box {
+          border-radius: 5px;
+          background-color: $subClr;
+          @include flex(around);
+          flex-direction: column;
+          width: 350px;
+          height: 260px;
+          cursor: pointer;
+          transition: 0.5s ease;
+          &--description {
+               @include abs(center);
+               color: $mainClr;
+               width: 350px;
+               padding: 15px;
+               text-align: justify;
+               transition: 0.35s ease;
+          }
+          &--img {
+               width: 320px;
+               height: 180px;
+               position: relative;
+               transition: 0.45s ease;
+               & img {
+                    @include abs(full);
+               }
+          }
+          &--title {
+               color: $activeClr;
+               text-shadow: 1px 1px rgb(44, 44, 44);
+               padding-bottom: 10px;
+               transition: 0.35s ease;
+          }
+          &:hover {
+               background-color: $hoverClr;
+               border: 1px solid $mainClr;
+               box-shadow: 0 0 15px $mainClr;
+               & .ac__box--title {
+                    color: $mainClr;
+                    text-shadow: none;
+               }
+               &.ac__box--img {
+                    width: 100%;
+               }
+               & .ac__box--img img {
+                    opacity: 0;
+               }
+          }
+     }
+}
+.hide {
+     opacity: 1 !important;
+}

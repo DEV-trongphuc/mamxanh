@@ -1,0 +1,55 @@
+@import "../../scss/_variable";
+.contact__container {
+     @include flex(center);
+     background: $mainClr;
+     gap: 30px;
+     @media screen and (max-width: 767px) {
+          flex-direction: column;
+     }
+}
+.contact {
+     &__face {
+          width: 400px;
+          height: 340px;
+          position: relative;
+          & iframe {
+               @include abs(full);
+          }
+     }
+     &__map {
+          width: 350px;
+          height: 340px;
+          position: relative;
+          & iframe {
+               @include abs(full);
+          }
+     }
+     &__icon {
+          padding-right: 10px;
+          padding-bottom: 10px;
+     }
+     &__content {
+          color: $hoverClr;
+          @include flex(around);
+          flex-direction: column;
+          align-items: flex-start;
+          width: 350px;
+          height: 350px;
+          @media screen and (max-width: 767px) {
+               width: 250px;
+          }
+     }
+     &__box {
+          padding: 0 20px;
+          @media screen and (max-width: 767px) {
+               padding: 0 0px;
+          }
+     }
+     &__description a {
+          color: $hoverClr;
+          transition: 0.35s ease-in-out;
+          &:hover {
+               color: rgb(255, 255, 255);
+          }
+     }
+}

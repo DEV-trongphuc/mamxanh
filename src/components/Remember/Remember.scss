@@ -1,0 +1,12 @@
+@import "../../scss/_variable";
+
+.remember {
+     font-size: 12px;
+     padding: 0 18px;
+     color: $activeClr;
+     background-color: #144400;
+     box-shadow: 0 0 5px $hoverClr;
+     & a {
+          color: $activeClr;
+     }
+}

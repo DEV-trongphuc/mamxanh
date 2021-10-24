@@ -1,0 +1,26 @@
+@import "../../scss/_variable";
+
+#memoryImg {
+     margin-top: 70px;
+}
+.me__container {
+     @include flex(center);
+     flex-wrap: wrap;
+}
+.me {
+     &__box {
+          min-width: 500px;
+          height: 300px;
+          background: red;
+          position: relative;
+          overflow: hidden;
+          &:hover img {
+               transform: scale(1.1);
+          }
+          & img {
+               @include abs(full);
+               cursor: zoom-in;
+               transition: 0.5s ease-in;
+          }
+     }
+}
