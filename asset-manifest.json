@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/mamxanh/static/css/main.b87648c6.chunk.css",
-    "main.js": "/mamxanh/static/js/main.6ba2a19f.chunk.js",
-    "main.js.map": "/mamxanh/static/js/main.6ba2a19f.chunk.js.map",
+    "main.css": "/mamxanh/static/css/main.51bf960b.chunk.css",
+    "main.js": "/mamxanh/static/js/main.e9f61836.chunk.js",
+    "main.js.map": "/mamxanh/static/js/main.e9f61836.chunk.js.map",
     "runtime-main.js": "/mamxanh/static/js/runtime-main.ee4e273b.js",
     "runtime-main.js.map": "/mamxanh/static/js/runtime-main.ee4e273b.js.map",
     "static/js/2.e06c5d27.chunk.js": "/mamxanh/static/js/2.e06c5d27.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.a76d3db6.chunk.js": "/mamxanh/static/js/3.a76d3db6.chunk.js",
     "static/js/3.a76d3db6.chunk.js.map": "/mamxanh/static/js/3.a76d3db6.chunk.js.map",
     "index.html": "/mamxanh/index.html",
-    "static/css/main.b87648c6.chunk.css.map": "/mamxanh/static/css/main.b87648c6.chunk.css.map",
+    "static/css/main.51bf960b.chunk.css.map": "/mamxanh/static/css/main.51bf960b.chunk.css.map",
     "static/js/2.e06c5d27.chunk.js.LICENSE.txt": "/mamxanh/static/js/2.e06c5d27.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ee4e273b.js",
     "static/js/2.e06c5d27.chunk.js",
-    "static/css/main.b87648c6.chunk.css",
-    "static/js/main.6ba2a19f.chunk.js"
+    "static/css/main.51bf960b.chunk.css",
+    "static/js/main.e9f61836.chunk.js"
   ]
 }
