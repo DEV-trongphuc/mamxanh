@@ -1,26 +1,26 @@
 import React from "react";
 import Heading from "../Heading/Heading";
-import "./Manager.scss";
-export default function Manager({ Info, title, sub }) {
+import "./Hosting.scss";
+export default function Hosting({ Info, title, sub }) {
      return (
           <div id="hosting">
                <Heading title={title} sub={sub} />
-               <div className="ma__container">
+               <div className="host__container">
                     {Info.map((userInfo, index) => (
-                         <div key={index} className="ma__box">
-                              <div className="ma__img">
+                         <div key={index} className="host__box">
+                              <div className="host__img">
                                    <img src={userInfo.link} alt="aaaaa" />
                               </div>
-                              <div className="ma__content">
-                                   <h4 className="ma__name">{userInfo.name}</h4>
-                                   <p className="ma__position">
+                              <div className="host__content">
+                                   <h4 className="host__name">{userInfo.name}</h4>
+                                   <p className="host__position">
                                         {userInfo.position}
                                    </p>
                                    <a
                                         href={userInfo.linkFB}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="ma__icon"
+                                        className="host__icon"
                                    >
                                         <i className="fab fa-facebook"></i>
                                    </a>

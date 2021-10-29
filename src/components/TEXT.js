@@ -1,12 +1,21 @@
 const Text = {
      navList: [
-          { title: "Mầm xanh", id: "#slider" },
-          { title: "Hoạt động", id: "#activity" },
-          { title: "Sinh hoạt", id: "#activityClub" },
-          { title: "Lịch sử", id: "#activityClub" },
-          { title: "Ban chủ nhiệm", id: "#manager" },
-          { title: "Hình ảnh", id: "#memoryImg" },
-          { title: "Liên hệ", id: "#contact" },
+          { title: "Mầm xanh", id: "/mamxanh" },
+          // { title: "Hoạt động", id: "/activity" },
+          { title: "Ban chủ nhiệm", id: "/info" },
+          { title: "Ban tổ chức", id: "/host" },
+          { title: "Hình ảnh", id: "/Images/tetyeuthuong" },
+          { title: "Liên hệ", id: "/contact" },
+     ],
+     event: [
+          { title: "Tiêu biểu", id: "/Images/" },
+          { title: "Tết Yêu Thương", id: "/Images/tetyeuthuong" },
+          { title: "Tết Thiếu Nhi", id: "/Images/tetthieunhi" },
+          { title: "Tết Trung Thu", id: "/Images/tettrungthu" },
+          { title: "Áo Ấm Mùa Đông", id: "/Images/aoam" },
+          { title: "Giáng Sinh Ấm Áp", id: "/Images/noel" },
+          { title: "Tuyển Tình Nguyện Viên", id: "/Images/tuyentnv" },
+          { title: "PROM NIGHT", id: "/Images/prom" },
      ],
      activity: [
           "Tết Yêu Thương",

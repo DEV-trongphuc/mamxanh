@@ -6,19 +6,119 @@
 .me__container {
      @include flex(center);
      flex-wrap: wrap;
+     gap: 2px;
+     transition: 0.35s ease;
+}
+.show__more {
+     @include flex(center);
+     margin-top: 70px;
+     &--btn {
+          outline: none;
+          border: none;
+          padding: 6px 13px;
+          font-size: 16px;
+          border: 1px solid $newMain;
+          border-radius: 100rem;
+          background-color: $newMain;
+          box-shadow: 0 0 5px $newMain;
+          color: $activeClr;
+          position: relative;
+          overflow: hidden;
+          font-weight: 500;
+          transition: 0.35s ease;
+
+          &:hover {
+               box-shadow: 0 0 12px $newMain;
+               transform: scale(1.01);
+          }
+     }
+}
+.none {
+     opacity: 0;
+}
+.prev__img,
+.next__img {
+     &:active {
+          background-color: $newMain2;
+     }
+     border: none;
+     font-size: 50px;
+     color: $newMain;
+     background: transparent;
+
+     @media screen and (max-width: 767px) {
+          margin-top: 350px;
+     }
 }
 .me {
+     &__full {
+          position: relative;
+          &--close {
+               display: none;
+          }
+          &--overlay {
+               position: absolute;
+               background-color: rgba(0, 70, 21, 0.842);
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               z-index: -2;
+          }
+          &--show {
+               position: fixed;
+               top: 0px;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               z-index: 9999999;
+               @include flex(between);
+               display: none;
+
+               padding: 0 180px;
+               @media screen and (max-width: 767px) {
+                    padding: 0 0px;
+                    justify-content: center;
+                    gap: 10px;
+               }
+               @media screen and (min-width: 767px) and (max-width: 1380px) {
+                    padding: 0 30px;
+               }
+
+               &-item {
+                    @include abs(center);
+                    min-width: 400px;
+                    width: 1000px;
+                    height: 700px;
+                    border: 5px solid $mainClr;
+                    box-shadow: 0 0 10px $hoverClr;
+                    z-index: -1;
+                    @media screen and (max-width: 767px) {
+                         margin-top: -80px;
+                         width: 190px;
+                         height: 400px;
+                    }
+               }
+          }
+     }
      &__box {
           min-width: 500px;
           height: 300px;
-          background: $mainClr;
+          background: $subClr2;
           position: relative;
           overflow: hidden;
+          box-shadow: 0 0 1px $mainClr;
+          transition: 0.35s ease;
+          @media screen and (max-width: 767px) {
+               min-width: 100%;
+          }
           &:hover img {
-               transform: scale(1.1);
+               transform: scale(1.05);
           }
           & img {
                @include abs(full);
+               transition: 0.35s ease;
+
                cursor: zoom-in;
                transition: 0.5s ease-in;
           }

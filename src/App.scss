@@ -2,9 +2,13 @@
 
 html {
      box-sizing: border-box;
-     background-color: $activeClr;
+     background-color: $hoverClr;
      scroll-behavior: smooth;
      transition: 0.35s ease-out;
+}
+body {
+     overflow-x: hidden;
+     font-family: "Roboto", sans-serif;
 }
 * {
      margin: 0;
@@ -35,20 +39,27 @@ img {
      display: block;
      max-width: 100%;
 }
-.btn__top {
-     font-size: 50px;
-     background-color: transparent;
-     border: none;
-     color: rgb(52, 163, 0);
-     position: fixed;
-     bottom: 50px;
-     right: 50px;
-     display: none;
-     &:hover {
-          opacity: 0.8;
-     }
+/* width */
+::-webkit-scrollbar {
+     width: 8px;
 }
-.show {
-     display: block !important;
-     cursor: pointer;
+
+/* Track */
+::-webkit-scrollbar-track {
+     box-shadow: inset 0 0 2px $subClr2;
+     border-radius: 100rem;
+     transition: 0.35s ease;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+     background: $newMain;
+
+     transition: 0.35s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+     background: $newMain;
+     transition: 0.35s ease;
 }

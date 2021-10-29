@@ -1,23 +1,29 @@
 @import "../../scss/_variable";
 #slider {
-     margin-top: 50px;
-     height: 800px;
+     padding-top: 50px;
+     padding-bottom: 100px;
      @include flex(center);
      flex-direction: column;
      @media screen and (max-width: 767px) {
           height: 100px;
           margin-top: 250px;
+          padding-bottom: 300px;
      }
 }
-
+.slider__background {
+     position: fixed;
+     width: 100%;
+     height: 100%;
+}
 .slider__simple {
      margin-top: 20px;
-     width: 70%;
-     min-height: 600px;
+     width: 80%;
+     min-height: 700px;
      overflow: hidden;
+     box-shadow: 0 0 10px $mainClr;
      position: relative;
      @media screen and (max-width: 767px) {
-          min-height: 400px;
+          min-height: 280px;
           width: 100%;
      }
 }
@@ -27,19 +33,10 @@
      height: 100%;
      border-radius: 5px;
      overflow: hidden;
-     @media screen and (max-width: 767px) {
-          margin-top: -100px;
-     }
 }
 .slider__item {
      width: 100%;
      height: auto;
-}
-@media screen and (max-width: 504px) {
-     .slider__container {
-          width: 80%;
-          height: 50%;
-     }
 }
 .slider__image {
      @include abs(full);
@@ -63,7 +60,7 @@
 .next__btn,
 .prev__btn {
      border: none;
-     font-size: 2rem;
+     font-size: 1.5rem;
      border-radius: 50%;
      width: 3rem;
      height: 3rem;
@@ -71,6 +68,11 @@
      background-color: rgba(18, 88, 0, 0.644);
      cursor: pointer;
      transition: 0.2s ease;
+     @media screen and (max-width: 767px) {
+          font-size: 1.2rem;
+          width: 2.5rem;
+          height: 2.5rem;
+     }
 }
 button:active {
      background-color: rgb(92, 92, 92);
@@ -93,6 +95,7 @@ button:active {
      width: 2rem;
      height: 0.3rem;
      border-radius: 5px;
+     cursor: pointer;
      font-size: 5rem;
      transition: 0.35s ease-in-out;
 }

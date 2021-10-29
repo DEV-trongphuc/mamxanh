@@ -1,0 +1,37 @@
+@import "../scss/_variable";
+#youtube {
+     position: relative;
+}
+.youtube_img1 {
+     position: absolute;
+     left: -130px;
+}
+.youtube_img2 {
+     position: absolute;
+
+     right: -148px;
+}
+.youtube {
+     padding: 80px;
+     margin: auto;
+     margin-top: 100px;
+     width: 1000px;
+     height: 600px;
+     @include flex(center);
+     position: relative;
+     @media screen and (max-width: 767px) {
+          width: 450px;
+          height: 350px;
+     }
+     @media screen and (max-width: 467px) {
+          width: 320px;
+          height: 260px;
+     }
+     & iframe {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          box-shadow: 0 0 15px $mainClr;
+          border: 10px solid $mainClr;
+     }
+}

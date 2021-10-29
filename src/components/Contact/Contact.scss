@@ -1,7 +1,14 @@
 @import "../../scss/_variable";
-.contact__container {
-     @include flex(center);
+
+#contact {
+     margin-top: 40px;
+     padding-top: 30px;
      background: $mainClr;
+}
+.contact__container {
+     padding-bottom: 50px;
+     @include flex(center);
+     // background: $mainClr;
      gap: 30px;
      @media screen and (max-width: 767px) {
           flex-direction: column;
@@ -9,15 +16,20 @@
 }
 .contact {
      &__face {
-          width: 400px;
+          width: 300px;
           height: 340px;
           position: relative;
+          @media screen and (max-width: 767px) {
+               height: 550px;
+               width: 300px;
+          }
           & iframe {
                @include abs(full);
+               border: none;
           }
      }
      &__map {
-          width: 350px;
+          width: 370px;
           height: 340px;
           position: relative;
           & iframe {
@@ -30,14 +42,12 @@
      }
      &__content {
           color: $hoverClr;
+          flex-wrap: wrap;
           @include flex(around);
           flex-direction: column;
           align-items: flex-start;
           width: 350px;
           height: 350px;
-          @media screen and (max-width: 767px) {
-               width: 250px;
-          }
      }
      &__box {
           padding: 0 20px;

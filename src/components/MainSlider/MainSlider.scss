@@ -1,0 +1,112 @@
+@import "../../scss/_variable";
+#main-slider {
+     @include flex(center);
+     margin-top: 50px;
+     flex-direction: column;
+}
+// .slider__background {
+//      position: relative;
+//      width: 100%;
+//      top: -100px;
+//      right: 0;
+//      height: 50%;
+//      & img {
+//           position: absolute;
+//           height: 100%;
+//      }
+//      &::after {
+//           content: "";
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           width: 100%;
+//           height: 100%;
+//           z-index: 1;
+//           background: linear-gradient(to bottom, $newMain3, $mainClr);
+//           opacity: 0.4;
+//      }
+//      &::before {
+//           content: "";
+//           position: absolute;
+//           bottom: 0;
+//           left: 0;
+//           width: 100%;
+//           height: 30%;
+//           z-index: 1;
+//           background: linear-gradient(to bottom, transparent, $activeClr);
+//           opacity: 1;
+//      }
+// }
+.m-slider {
+     &__container {
+          margin-top: 50px;
+          width: 80%;
+          height: 100%;
+          @include flex(center);
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 0 10px $mainClr;
+          @media screen and (max-width: 767px) {
+               width: 95%;
+               height: 260px;
+          }
+     }
+     &__images {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          position: relative;
+          transition: 0.35s ease;
+          &img {
+               width: 100%;
+          }
+          @media screen and (max-width: 767px) {
+               width: 100%;
+          }
+     }
+     &__buttons {
+          @include abs(center);
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+     }
+     &__button {
+          &:active {
+               opacity: 0.8;
+          }
+          border: none;
+          cursor: pointer;
+          font-size: 30px;
+          color: $newMain;
+          background-color: transparent;
+          @media screen and (max-width: 767px) {
+          }
+     }
+     &__dot {
+          position: absolute;
+          display: flex;
+          text-align: center;
+          align-items: center;
+          bottom: 0;
+          left: 50%;
+          gap: 15px;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+          &--item {
+               background-color: rgba(190, 190, 190, 0.8);
+               padding: 2px 15px;
+               margin-bottom: 6px;
+               border-radius: 100rem;
+               transition: 0.35s ease;
+               &.active {
+                    background-color: white;
+               }
+          }
+     }
+
+     &__item {
+          width: 100%;
+          height: 100%;
+          position: relative;
+     }
+}

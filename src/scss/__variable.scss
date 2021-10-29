@@ -1,7 +1,12 @@
-$mainClr: #184e01;
+$mainClr: #1f6800;
 $activeClr: #d0ffbf;
 $hoverClr: #cbffb7;
-$subClr: #1f4e00e3;
+$subClr2: #a9ff88;
+$subClr: #146300e3;
+$newMain: rgb(28, 119, 0);
+$newMain2: rgb(28, 119, 0.8);
+$newMain3: rgb(99, 192, 12);
+
 @mixin flex($position) {
      @if $position == "center" {
           display: flex;

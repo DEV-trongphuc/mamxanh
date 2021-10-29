@@ -1,0 +1,25 @@
+@import "../../scss/_variable";
+.show__more {
+     @include flex(center);
+     margin-top: 70px;
+     &--btn {
+          outline: none;
+          border: none;
+          padding: 6px 13px;
+          font-size: 16px;
+          border: 1px solid $newMain;
+          border-radius: 100rem;
+          background-color: $newMain;
+          box-shadow: 0 0 5px $newMain;
+          color: $activeClr;
+          position: relative;
+          overflow: hidden;
+          font-weight: 500;
+          transition: 0.35s ease;
+
+          &:hover {
+               box-shadow: 0 0 12px $newMain;
+               transform: scale(1.01);
+          }
+     }
+}

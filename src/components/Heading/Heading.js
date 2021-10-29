@@ -1,15 +1,20 @@
 import React from "react";
 import "./Heading.scss";
-export default function Heading({ title, sub }) {
+export default function Heading({ title, sub, color }) {
      return (
           <div className="heading-center">
                <div>
-                    <h1 className="heading">
-                         <span></span>
+                    <h2
+                         style={color ? { color: `${color}` } : {}}
+                         className="heading"
+                    >
+                         <span
+                              style={color ? { backgroundColor: `${color}` } : {}}
+                         ></span>
                          {title}
-                    </h1>
+                    </h2>
                </div>
-               <div className="sub">
+               <div className="sub" style={color ? { color: `${color}` } : {}}>
                     {sub || "Kết nối yêu thương - Ươm mầm mơ ước"}
                </div>
           </div>
