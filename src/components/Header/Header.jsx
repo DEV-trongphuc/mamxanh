@@ -1,11 +1,11 @@
-import React from "react";
-import "./Header.scss";
+import React, { memo } from "react";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
-export default function Header({ navList }) {
+import Text from "../TEXT";
+import "./Header.scss";
+function Header() {
+     const navList = Text.navList;
      window.addEventListener("scroll", () => {
           const headerScroll = document.querySelector(".header__scroll");
-          console.log(headerScroll);
           const bH = document.body.offsetHeight;
           const wY = window.scrollY;
           if (wY < 10) {
@@ -21,18 +21,12 @@ export default function Header({ navList }) {
           }
           headerScroll.style.width = `${W}%`;
      });
-     const [path, setPath] = useState("/mamxanh");
-     const isNone = path === "/mamxanh";
+
      const handleClick = (e, title) => {
           window.scroll(0, 0);
           document.title = title;
      };
      const itemActived = document.querySelector(".header__list--item.active");
-     window.addEventListener("click", () => {
-          setPath(() => {
-               return window.location.pathname;
-          });
-     });
      const handleBackNav = () => {
           window.history.back();
           itemActived && itemActived.classList.remove("active");
@@ -41,10 +35,7 @@ export default function Header({ navList }) {
      return (
           <div className="header active">
                <span className="header__scroll"></span>
-               <span
-                    onClick={handleBackNav}
-                    className={isNone ? "header__back none" : "header__back"}
-               >
+               <span onClick={handleBackNav} className="header__back">
                     <i className="fas fa-chevron-circle-left"></i>{" "}
                     <span>Quay lại</span>
                </span>
@@ -78,3 +69,4 @@ export default function Header({ navList }) {
           </div>
      );
 }
+export default memo(Header);

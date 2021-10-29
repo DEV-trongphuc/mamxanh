@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./EventName.scss";
 import Text from "../TEXT";
 export default function EventName() {
@@ -7,16 +7,18 @@ export default function EventName() {
           <div>
                <div className="e__event">
                     {Text.event.map((e) => (
-                         <Link
+                         <NavLink
                               to={e.id}
                               onClick={() => (document.title = e.title)}
                               key={e.id}
                               className="e__event__container"
+                              exact
+                              activeClassName="activeEvent"
                          >
-                              <Link to={e.id} className="e__event-name">
-                                   {e.title}
-                              </Link>
-                         </Link>
+                              {/* <NavLink to={e.id} className="e__event-name"> */}
+                              {e.title}
+                              {/* </NavLink> */}
+                         </NavLink>
                     ))}
                </div>
           </div>

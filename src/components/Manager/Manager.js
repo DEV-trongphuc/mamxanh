@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "../Heading/Heading";
 import "./Manager.scss";
 export default function Manager({ Info, title, sub }) {
+     console.log("Mana Render");
      return (
           <div id="hosting">
                <Heading title={title} sub={sub} />

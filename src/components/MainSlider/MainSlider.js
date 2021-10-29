@@ -46,7 +46,7 @@ export default function MainSlider({ title, sub }) {
                clearInterval(autoSlider.current);
                clearInterval(autoNext);
           };
-     }, []);
+     });
      const handlePrev = (e) => {
           id -= 1;
           if (id < 0) {

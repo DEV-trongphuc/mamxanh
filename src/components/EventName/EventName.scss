@@ -32,10 +32,14 @@
           position: relative;
           overflow: hidden;
           font-weight: 400;
-          transition: 0.2s ease;
+          transition: 0.25s ease-in;
 
           @media screen and (max-width: 767px) {
                font-size: 11px;
+          }
+          &.activeEvent {
+               background-color: $hoverClr;
+               color: $mainClr;
           }
 
           &:hover {

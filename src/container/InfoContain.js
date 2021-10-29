@@ -1,8 +1,10 @@
 import React from "react";
 import Manager from "../components/Manager/Manager";
 import IMG_LIST from "../components/LINK__IMG";
-
-export default function InfoContain() {
+import { memo } from "react";
+function InfoContain() {
+     const BackBtnN = document.querySelector(".header__back.none");
+     BackBtnN && BackBtnN.classList.remove("none");
      return (
           <div style={{ paddingTop: 20 }}>
                <Manager
@@ -13,3 +15,4 @@ export default function InfoContain() {
           </div>
      );
 }
+export default memo(InfoContain);

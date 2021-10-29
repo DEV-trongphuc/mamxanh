@@ -3,6 +3,7 @@ import Hosting from "../components/Hosting/Hosting";
 import IMG_LIST from "../components/LINK__IMG";
 
 export default function HostingContain() {
+     console.log("Host Render");
      return (
           <div style={{ paddingTop: 20 }}>
                <Hosting

@@ -1,15 +1,21 @@
-@import "../scss/_variable";
+@import "../../scss/_variable";
 #youtube {
      position: relative;
 }
 .youtube_img1 {
      position: absolute;
      left: -130px;
+     @media screen and (max-width: 767px) {
+          display: none;
+     }
 }
 .youtube_img2 {
      position: absolute;
 
      right: -148px;
+     @media screen and (max-width: 767px) {
+          display: none;
+     }
 }
 .youtube {
      padding: 80px;
