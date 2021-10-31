@@ -3,6 +3,36 @@
      @include flex(center);
      margin-top: 50px;
      flex-direction: column;
+     position: relative;
+}
+.slider__box__container {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 70%;
+     height: 600px;
+     cursor: grab;
+
+     @media screen and (max-width: 1200px) {
+          width: 95%;
+          height: 530px;
+     }
+     @media screen and (max-width: 767px) {
+          width: 95%;
+          height: 450px;
+     }
+     @media screen and (max-width: 600px) {
+          width: 95%;
+          height: 350px;
+     }
+     @media screen and (max-width: 467px) {
+          width: 95%;
+          height: 235px;
+     }
+     &:active {
+          cursor: grabbing;
+     }
 }
 // .slider__background {
 //      position: relative;
@@ -40,16 +70,14 @@
 .m-slider {
      &__container {
           margin-top: 50px;
-          width: 80%;
+          width: 100%;
           height: 100%;
+          object-fit: cover;
           @include flex(center);
-          position: relative;
+          position: absolute;
           overflow: hidden;
-          box-shadow: 0 0 10px $mainClr;
-          @media screen and (max-width: 767px) {
-               width: 95%;
-               height: 260px;
-          }
+          border-radius: 5px;
+          box-shadow: 0 0 7px $mainClr;
      }
      &__images {
           width: 100%;
@@ -66,9 +94,14 @@
      }
      &__buttons {
           @include abs(center);
+
           display: flex;
-          width: 100%;
+          top: 55%;
+          width: 110%;
           justify-content: space-between;
+          @media screen and (max-width: 767px) {
+               z-index: 5;
+          }
      }
      &__button {
           &:active {
@@ -76,10 +109,11 @@
           }
           border: none;
           cursor: pointer;
-          font-size: 30px;
+          font-size: 40px;
           color: $newMain;
           background-color: transparent;
           @media screen and (max-width: 767px) {
+               font-size: 35px;
           }
      }
      &__dot {
@@ -88,13 +122,14 @@
           text-align: center;
           align-items: center;
           bottom: 0;
+          z-index: 5;
           left: 50%;
           gap: 15px;
           transform: translate(-50%, -50%);
           cursor: pointer;
           &--item {
                background-color: rgba(190, 190, 190, 0.8);
-               padding: 2px 15px;
+               padding: 2px 10px;
                margin-bottom: 6px;
                border-radius: 100rem;
                transition: 0.35s ease;

@@ -2,9 +2,9 @@
 
 html {
      box-sizing: border-box;
-     background-color: $hoverClr;
+     background-color: rgb(255, 255, 255);
      scroll-behavior: smooth;
-     transition: 0.35s ease-out;
+     transition: 0.5s ease-out;
 }
 body {
      overflow-x: hidden;
@@ -41,7 +41,7 @@ img {
 }
 /* width */
 ::-webkit-scrollbar {
-     width: 8px;
+     width: 9px;
 }
 
 /* Track */
@@ -54,6 +54,7 @@ img {
 /* Handle */
 ::-webkit-scrollbar-thumb {
      background: $newMain;
+     border-radius: 100rem;
 
      transition: 0.35s ease;
 }

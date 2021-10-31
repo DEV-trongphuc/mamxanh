@@ -1,11 +1,14 @@
-$mainClr: #1f6800;
-$activeClr: #d0ffbf;
-$hoverClr: #cbffb7;
-$subClr2: #a9ff88;
-$subClr: #146300e3;
-$newMain: rgb(28, 119, 0);
+$mainClr: #185500;
+$activeClr: #e0ffd5;
+$background: #ffffff;
+$hoverClr: #deffd1;
+$subClr2: #c1ffa8;
+$subClr: #166e00e3;
+$newMain: rgb(3, 85, 0);
 $newMain2: rgb(28, 119, 0.8);
-$newMain3: rgb(99, 192, 12);
+$newMain3: rgb(115, 204, 32);
+$newClr4: #1b5a00;
+$TextClr: #154700;
 
 @mixin flex($position) {
      @if $position == "center" {

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export default function Button({ text, onButtonClick }) {
+import "./Button.scss";
+export default function Button({ to, text, onButtonClick }) {
      const handleShow = (e) => {
           if (onButtonClick) {
                onButtonClick(e);
@@ -9,7 +10,7 @@ export default function Button({ text, onButtonClick }) {
      return (
           <div className="show__more">
                <Link
-                    to="/Images"
+                    to={to}
                     className="show__more--btn"
                     onClick={(e) => handleShow(e)}
                >

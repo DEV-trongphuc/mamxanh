@@ -9,11 +9,21 @@ export default function GotoTop() {
                } else {
                     topBtn.classList.remove("show");
                }
+
+               const bH = document.body.offsetHeight;
+               const wY = window.scrollY;
+               let W = (wY / bH) * 100;
+
+               if (W > 66) {
+                    topBtn.classList.add("active");
+               } else {
+                    topBtn.classList.remove("active");
+               }
           });
      };
      return (
           <>
-               <div onClick={() => window.scroll(0, 0)} className="btn__top">
+               <div onClick={() => window.scroll(0, 0)} className="btn__top ">
                     <i className="fas fa-chevron-circle-up"></i>
                </div>
           </>

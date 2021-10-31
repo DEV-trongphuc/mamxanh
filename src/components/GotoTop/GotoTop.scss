@@ -8,13 +8,16 @@
      right: 20px;
      display: none;
      transition: 0.3s ease;
+     &.active {
+          animation: tiktok 0.35s linear 2;
+     }
+
      &::before {
           content: "";
           @include abs(center);
           width: 80%;
           height: 50%;
           z-index: -1;
-
           background: $activeClr !important;
           border-radius: 100rem;
      }
@@ -25,4 +28,20 @@
 .show {
      display: block !important;
      cursor: pointer;
+}
+@keyframes tiktok {
+     0% {
+          transform: scale(1.1);
+     }
+     60% {
+          transform: scale(1.1);
+     }
+     90% {
+          transform: scale(1.2);
+     }
+     100% {
+          transform: scale(1);
+          opacity: 0.95;
+          color: $newMain3;
+     }
 }

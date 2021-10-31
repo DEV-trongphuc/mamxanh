@@ -41,11 +41,6 @@ export default function Slider({ title, sub }) {
 
      return (
           <div id="slider">
-               <img
-                    className="slider__background"
-                    src="https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/T%E1%BA%BFt%20Y%C3%AAu%20Th%C6%B0%C6%A1ng/tetyeuthuong/IMG_0215.JPG?raw=true"
-                    alt="images"
-               />
                <Heading sub={sub} title={title} />
                <div className="slider__simple">
                     <div className="slider__container">

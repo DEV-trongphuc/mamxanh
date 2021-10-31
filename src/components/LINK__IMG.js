@@ -86,6 +86,8 @@ const IMG_LIST = {
           {
                link: "https://doitinhnguyenmamxanh.000webhostapp.com/img/img/show/ramat.JPG",
                title: "Tuyển Tình Nguyện Viên",
+               path: "/Images/tuyentnv",
+
                description: "",
           },
           {
@@ -105,13 +107,13 @@ const IMG_LIST = {
           },
           {
                link: "https://doitinhnguyenmamxanh.000webhostapp.com/img/prom.JPG",
-
                title: "Prom Night",
+               path: "/Images/prom",
                description: "",
           },
      ],
      managerInfo: [
-          // HÌNH VÀ THÔNG TIN BAN CHỦ NHIỆM
+          // HÌNH VÀ THÔNG TIN BAN CHỦ NHIỆM f13
           {
                link: "https://doitinhnguyenmamxanh.000webhostapp.com/img/img/ngoc.jpg",
 
@@ -182,6 +184,159 @@ const IMG_LIST = {
                name: "Nguyễn Thị Thanh Hương",
                position: "Đội Phó",
                linkFB: "https://www.facebook.com/profile.php?id=100035351350038",
+          },
+     ],
+     managerInfoF12: [
+          // HÌNH VÀ THÔNG TIN BAN CHỦ NHIỆM f13
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/MX%20TV.png?raw=true",
+
+               name: "Nguyễn Nhật Linh",
+               position: "Nhóm dạy Tre Xanh",
+               linkFB: "https://www.facebook.com/profile.php?id=100012009613087",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/bcn2020/nuong.JPG?raw=true",
+               name: "Phan Thị Nương",
+               position: "Nhóm dạy Bình Triệu",
+               linkFB: "https://www.facebook.com/profile.php?id=100017902893144",
+          },
+          {
+               link: "https://doitinhnguyenmamxanh.000webhostapp.com/img/img/thanhhuongavt.jpg",
+
+               name: "Nguyễn Thị Thanh Hương",
+               position: "Làng thiếu niên Thủ Đức",
+               linkFB: "https://www.facebook.com/profile.php?id=100035351350038",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/bcn2020/Hue.JPG?raw=true",
+
+               name: "Lê Thị Hồng Huế",
+               position: "Nhóm dạy Ung Bứu",
+               linkFB: "https://www.facebook.com/profile.php?id=100026860955058",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/bcn2020/huyen.JPG?raw=true",
+               name: "Hồ Thị Khánh Huyền",
+               position: "Trưởng ban Kỹ Thuật",
+               linkFB: "https://www.facebook.com/huyenhtk00",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/bcn2020/khoi.JPG?raw=true",
+               name: "Trần Minh Khôi",
+               position: "Tài Chính - Hậu Cần",
+               linkFB: "https://www.facebook.com/minhkhoi0415",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/bcn2020/thao.JPG?raw=true",
+
+               name: "Nguyễn Thị Thanh Thảo",
+               position: "Trưởng ban Kỹ Năng",
+               linkFB: "https://www.facebook.com/profile.php?id=100013004672243",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/bcn2020/nghia.JPG?raw=true",
+
+               name: "Phan Hữu Nghĩa",
+               position: "Trưởng ban Truyền Thông",
+               linkFB: "https://www.facebook.com/nghia.phan.2802",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/bcn2020/lele.JPG?raw=true",
+               name: "Lê Thị Ly",
+               position: "Đội Phó",
+               linkFB: "https://www.facebook.com/ly.le2000",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/bcn2020/thuan.JPG?raw=true",
+               name: "Trần Bình Thuận",
+               position: "Đội Trưởng",
+               linkFB: "https://www.facebook.com/profile.php?id=100011091124612",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/bcn2020/thaotran.JPG?raw=true",
+               name: "Trần Việt Thảo",
+               position: "Đội Phó",
+               linkFB: "https://www.facebook.com/tranvietthaoo06",
+          },
+     ],
+     managerInfoF11: [
+          // HÌNH VÀ THÔNG TIN BAN CHỦ NHIỆM f13
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/MX%20TV.png?raw=true",
+
+               name: "Chưa có thông tin",
+               position: "Nhóm dạy Tre Xanh",
+               linkFB: "https://www.facebook.com/profile.php?id=100006196299830",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/MX%20TV.png?raw=true",
+               name: "Chưa có thông tin",
+               position: "Nhóm dạy Bình Triệu",
+               linkFB: "https://www.facebook.com/nhu.quynhh2002",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/MX%20TV.png?raw=true",
+
+               name: "Chưa có thông tin",
+               position: "Làng thiếu niên Thủ Đức",
+               linkFB: "https://www.facebook.com/profile.php?id=100008647117381",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/MX%20TV.png?raw=true",
+
+               name: "Chưa có thông tin",
+               position: "Nhóm dạy Ung Bứu",
+               linkFB: "https://www.facebook.com/lethi.trinh.560",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/MX%20TV.png?raw=true",
+               name: "Chưa có thông tin",
+               position: "Trưởng ban Kỹ Thuật",
+               linkFB: "https://www.facebook.com/hoaian1312",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/MX%20TV.png?raw=true",
+               name: "Chưa có thông tin",
+               position: "Tài Chính - Hậu Cần",
+               linkFB: "https://www.facebook.com/Diemphuc.128",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/MX%20TV.png?raw=true",
+
+               name: "Chưa có thông tin",
+               position: "Trưởng ban Kỹ Năng",
+               linkFB: "https://www.facebook.com/hanhnhi.1107",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/MX%20TV.png?raw=true",
+
+               name: "Chưa có thông tin",
+               position: "Trưởng ban Truyền Thông",
+               linkFB: "https://www.facebook.com/tuilabuine",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/MX%20TV.png?raw=true",
+               name: "Chưa có thông tin",
+               position: "Đội Phó",
+               linkFB: "https://www.facebook.com/0410hongnhung/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/MX%20TV.png?raw=true",
+               name: "Chưa có thông tin",
+               position: "Đội Trưởng",
+               linkFB: "https://www.facebook.com/dotranhiepnhan",
+          },
+          {
+               link: "https://github.com/dattrantiet/Images/blob/main/M%E1%BA%A7m%20Xanh/MX%20TV.png?raw=true",
+               name: "Chưa có thông tin",
+               position: "Đội Phó",
+               linkFB: "https://www.facebook.com/profile.php?id=100035351350038",
+          },
+     ],
+     team: [
+          {
+               t2020: "https://github.com/dattrantiet/Images/blob/main/bcn2020/IMG_0231.JPG?raw=true",
           },
      ],
      hostInfo: [

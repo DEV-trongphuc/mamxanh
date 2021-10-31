@@ -28,5 +28,14 @@ const Text = {
           "Nhóm dạy Ung Bướu",
           "Làng thiếu niên Thủ Đức",
      ],
+     Year: [
+          { year: "2021 - 2022", link: "/info" },
+          { year: "2020 - 2021", link: "/info/f12" },
+          { year: "2019 - 2020", link: "/info/f11" },
+          { year: "2018 - 2019", link: "/info/f10" },
+          { year: "2017 - 2018", link: "/info/f09" },
+          { year: "2016 - 2017", link: "/info/f08" },
+          { year: "2015 - 2016", link: "/info/f07" },
+     ],
 };
 export default Text;

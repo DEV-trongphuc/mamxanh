@@ -21,19 +21,25 @@
      }
      &__box {
           box-sizing: border-box;
-          border: 1px solid $subClr2;
           border-radius: 5px;
-          background-color: $subClr;
+          background-color: white;
           @include flex(around);
           flex-direction: column;
-          width: 380px;
-          height: 260px;
-          cursor: pointer;
-          transition: 0.35s ease-in;
-          box-shadow: 0 0 15px $mainClr;
+          width: 330px;
+          height: 250px;
+          transition: 0.3s ease;
+          box-shadow: 0 0 5px $mainClr;
+          overflow: hidden;
+          @media screen and (max-width: 767px) {
+               width: 380px;
+               height: 250px;
+          }
+          @media screen and (max-width: 467px) {
+               width: 310px;
+          }
           &--description {
                @include abs(center);
-               color: $mainClr;
+               color: $TextClr;
                width: 300px;
                padding: 10px;
                text-align: justify;
@@ -46,29 +52,48 @@
                     font-size: 12px;
                }
           }
+          &:hover .ac__box--img {
+               border: none;
+          }
           &--img {
-               width: 95%;
-               height: 180px;
+               width: 100%;
+               height: 83%;
                position: relative;
+               margin-top: -20px;
+               transition: 0.35s ease;
+               border-bottom: 2px solid $newMain2;
+
                & img {
                     @include abs(full);
-                    border-radius: 5px;
                     transition: 0.35s ease-in;
+                    object-fit: fill;
                }
           }
           &--title {
-               color: $activeClr;
-               padding-bottom: 10px;
-               transition: 0.35s ease;
+               color: $mainClr;
+               font-weight: 500;
+               transition: 0.35s cubic-bezier(0, 0.37, 0.85, 1.79);
+               padding: 4px 5px;
+               border-radius: 5px;
+               font-size: 18px;
+               transform: translateY(-2px);
           }
           &:hover {
-               background-color: $hoverClr;
-               border: 1px solid $newMain;
-               box-shadow: 0 0 20px $newMain;
-               transform: scale(1.02);
+               background-color: $background;
+               box-shadow: 0 0 4px $newMain;
+               transform: scale(1.01);
                & .ac__box--title {
-                    color: $mainClr;
+                    color: $background;
+                    box-shadow: 0 0 4px $newMain3;
                     text-shadow: none;
+                    background-color: $mainClr;
+                    border: 1px solid $mainClr;
+                    padding: 0;
+                    transform: translateY(-12px);
+                    cursor: pointer;
+                    padding: 4px 6px;
+                    border-radius: 5px;
+                    font-size: 15px;
                }
                & .ac__box--description {
                     opacity: 1;
@@ -84,4 +109,75 @@
 }
 .hide {
      opacity: 1 !important;
+}
+.ac__ques {
+     &.active {
+          z-index: 9999;
+          transform: scale(1);
+          opacity: 0.98;
+          transform: translate(-50%, -50%);
+     }
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transition: 0.25s ease-in-out;
+     width: 350px;
+     height: 200px;
+     background-color: $background;
+     transform-origin: 0 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 5px;
+     color: $mainClr;
+     z-index: -5;
+     box-shadow: 0 0 3px $mainClr;
+     transform: scale(0.005);
+     opacity: 0;
+     @media screen and (max-width: 767px) {
+          width: 300px;
+          height: 150px;
+     }
+
+     &__container {
+          @include flex(center);
+          gap: 60px;
+          flex-direction: column;
+     }
+     &__btns {
+          display: flex;
+          gap: 100px;
+     }
+     &__btn {
+          padding: 8px 12px;
+          box-shadow: 0 0 3px $mainClr;
+          transition: 0.25s ease-in-out;
+          color: white;
+          background-color: $mainClr;
+          border-radius: 5px;
+          border: none;
+
+          &:hover {
+               background-color: $background;
+               color: $mainClr;
+          }
+     }
+}
+.ac__modal {
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background-color: rgb(8, 29, 0);
+     opacity: 0;
+     z-index: -5;
+     transition: 0.35s ease-in-out;
+     &.active {
+          opacity: 0.4;
+          z-index: 0;
+     }
+}
+.ac__next__title {
+     font-weight: 500;
 }

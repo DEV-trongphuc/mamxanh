@@ -15,7 +15,7 @@ export default function Heading({ title, sub, color }) {
                     </h2>
                </div>
                <div className="sub" style={color ? { color: `${color}` } : {}}>
-                    {sub || "Kết nối yêu thương - Ươm mầm mơ ước"}
+                    {sub}
                </div>
           </div>
      );

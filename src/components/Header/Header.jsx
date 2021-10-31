@@ -23,13 +23,25 @@ function Header() {
      });
 
      const handleClick = (e, title) => {
+          const navMobile = document.querySelector(".header__list");
+          const navBar = document.querySelector(".header__bar");
+          const navBarClose = document.querySelector(".header__barclose");
           window.scroll(0, 0);
           document.title = title;
+          navMobile.classList.toggle("active1");
+          navBar.classList.remove("active1");
+          navBarClose.classList.toggle("active1");
      };
-     const itemActived = document.querySelector(".header__list--item.active");
      const handleBackNav = () => {
           window.history.back();
-          itemActived && itemActived.classList.remove("active");
+     };
+     const handleNav = (e) => {
+          const navMobile = document.querySelector(".header__list");
+          const navBar = document.querySelector(".header__bar");
+          const navBarClose = document.querySelector(".header__barclose");
+          navBar.classList.toggle("active1");
+          navBarClose.classList.toggle("active1");
+          navMobile.classList.toggle("active1");
      };
 
      return (
@@ -49,7 +61,7 @@ function Header() {
                     />
                </NavLink>
 
-               <ul className="header__list">
+               <ul className="header__list ">
                     {navList.map((item, index) => (
                          <li key={item.id}>
                               <NavLink
@@ -63,8 +75,11 @@ function Header() {
                          </li>
                     ))}
                </ul>
-               <div className="header__bar">
+               <div onClick={(e) => handleNav(e)} className="header__bar">
                     <i className="fas fa-bars"></i>
+               </div>
+               <div className="header__barclose active1">
+                    <i class="fas fa-times"></i>
                </div>
           </div>
      );

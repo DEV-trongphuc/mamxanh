@@ -17,13 +17,21 @@ export default function ActivityContainer() {
                     ActivityLIST={IMG_LIST.activityImg}
                     title="HOẠT ĐỘNG CHÍNH"
                     id="activity"
+                    sub="Hoạt động hàng năm"
                />
-               <Button text="Xem hình ảnh hoạt động" onButtonClick={onButtonClick} />
-               <Activity
-                    ActivityLIST={IMG_LIST.activityClub}
-                    title="SINH HOẠT ĐỘI"
-                    id="activityClub"
+               <Button
+                    to="/Images"
+                    text="Xem hình ảnh hoạt động"
+                    onButtonClick={onButtonClick}
                />
+               <div style={{ paddingBottom: 50 }}>
+                    <Activity
+                         ActivityLIST={IMG_LIST.activityClub}
+                         title="SINH HOẠT ĐỘI"
+                         id="activityClub"
+                         sub="Kết nối yêu thương - Ươm mầm mơ ước"
+                    />
+               </div>
           </div>
      );
 }

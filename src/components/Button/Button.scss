@@ -9,17 +9,31 @@
           font-size: 16px;
           border: 1px solid $newMain;
           border-radius: 100rem;
-          background-color: $newMain;
+          background-color: $newClr4 !important;
           box-shadow: 0 0 5px $newMain;
           color: $activeClr;
           position: relative;
           overflow: hidden;
-          font-weight: 500;
+          font-weight: 400;
           transition: 0.35s ease;
-
+          &::after {
+               content: "";
+               position: absolute;
+               width: 0%;
+               height: 100%;
+               top: 0%;
+               left: 0;
+               transition: 0.35s ease;
+               background: rgba(204, 204, 204, 0.075);
+               isolation: isolate;
+          }
           &:hover {
-               box-shadow: 0 0 12px $newMain;
+               box-shadow: 0 0 5px $newMain !important;
                transform: scale(1.01);
+               color: $background;
+               &::after {
+                    width: 100%;
+               }
           }
      }
 }

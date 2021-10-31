@@ -1,21 +1,33 @@
 import React, { useEffect, useState } from "react";
 import Heading from "../Heading/Heading";
+import LoadImg from "../LoadImg/LoadImg";
 import "./MemoryImg.scss";
+import { handleOnload, handleReLoad } from "../Functions";
+
 export default function MemoryImg({ title, sub, id, MemoryImg, num }) {
      var i = 0;
      const [numImg, setNumImg] = useState(num || 9);
+
      useEffect(() => {
           setNumImg(num || 9);
-          const moreBtn = document.querySelector(".show__more--btn");
-          moreBtn.innerText = "Xem thêm ảnh";
-     }, [num]);
+
+          return () => {
+               const moreBtn = document.querySelector(".show__more--btn");
+               const Img = document.querySelectorAll(".me__box img");
+               handleReLoad();
+               Img.forEach((item) => {
+                    item.style.opacity = "0";
+               });
+               moreBtn && (moreBtn.innerText = "Xem thêm ảnh");
+          };
+     }, [MemoryImg, num]);
      const newMemoryImg = [...MemoryImg].reverse();
      const EventImg = newMemoryImg.splice(0, numImg);
 
      const handleShowMore = () => {
           setNumImg(numImg + 9);
           const moreBtn = document.querySelector(".show__more--btn");
-          if (newMemoryImg.length === 0) {
+          if (newMemoryImg.length < 9) {
                moreBtn.innerText = "Hết rồi kiếm hình đi gòi up !!!";
           }
      };
@@ -30,7 +42,7 @@ export default function MemoryImg({ title, sub, id, MemoryImg, num }) {
      };
      const handlePrevImg = () => {
           i--;
-          if (i <= 0) {
+          if (i < 0) {
                i = EventImg.length - 1;
           }
           const imgShow = document.querySelector(".me__full--show-item");
@@ -87,7 +99,9 @@ export default function MemoryImg({ title, sub, id, MemoryImg, num }) {
                               onClick={(e) => handleImageClick(item, index)}
                               className="me__box"
                          >
+                              <LoadImg />
                               <img
+                                   onLoad={(e) => handleOnload(e, index)}
                                    loading="lazy"
                                    src={item.link}
                                    alt="Lỗi link ha gì goy coi hình khác đi"

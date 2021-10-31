@@ -1,18 +1,30 @@
 import React from "react";
 import Manager from "../components/Manager/Manager";
 import IMG_LIST from "../components/LINK__IMG";
-import { memo } from "react";
-function InfoContain() {
-     const BackBtnN = document.querySelector(".header__back.none");
-     BackBtnN && BackBtnN.classList.remove("none");
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Heading from "../components/Heading/Heading";
+import YearInfo from "../components/YearInfo/YearInfo";
+export default function InfoContain() {
      return (
-          <div style={{ paddingTop: 20 }}>
-               <Manager
-                    Info={IMG_LIST.managerInfo}
-                    title="BAN CHỦ NHIỆM"
-                    sub="Nhiệm kì 2021-2022"
-               />
-          </div>
+          <Router>
+               <div className="info__container" style={{ paddingTop: 70 }}>
+                    <Heading title="BAN CHỦ NHIỆM" />
+                    <YearInfo />
+                    <Switch>
+                         <Route exact path="/info">
+                              <Manager none={true} Info={IMG_LIST.managerInfo} />
+                         </Route>
+                         <Route exact path="/info/f12">
+                              <Manager
+                                   team={IMG_LIST.team[0].t2020}
+                                   Info={IMG_LIST.managerInfoF12}
+                              />
+                         </Route>
+                         <Route exact path="/info/f11">
+                              <Manager Info={IMG_LIST.managerInfoF11} />
+                         </Route>
+                    </Switch>
+               </div>
+          </Router>
      );
 }
-export default memo(InfoContain);

@@ -11,7 +11,14 @@ import ImgContain from "./container/ImgContain";
 import InfoContain from "./container/InfoContain";
 import SliderContain from "./container/SliderContain";
 import Youtube from "./components/Youtube/Youtube";
+import Loading from "./components/Loading/Loading";
+import { useState } from "react";
 function App() {
+     window.onbeforeunload = function (event) {};
+     const [loading, setLoading] = useState(true);
+     window.addEventListener("load", () => {
+          setLoading(false);
+     });
      console.log(
           "%c 🍔Web được xây dựng bằng React JS bởi | Huỳnh Trọng Phúc 🍓 TNV F12 🍓 ĐỘI TÌNH NGUYÊN MẦM XANH ️🏀️⚽",
           "color: green; padding:30px; font-size:18px; font-weight:700; line-height: 1.8",
@@ -19,6 +26,7 @@ function App() {
      return (
           <Router>
                <div className="App">
+                    {loading && <Loading />}
                     <Header />
                     <Switch>
                          <Route exact path="/mamxanh">

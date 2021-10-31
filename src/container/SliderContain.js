@@ -13,7 +13,10 @@ export default function SliderContain() {
 
      return (
           <>
-               <MainSlider title="ĐỘI TÌNH NGUYỆN MẦM XANH" />
+               <MainSlider
+                    title="ĐỘI TÌNH NGUYỆN MẦM XANH"
+                    sub="Kết nối yêu thương - Ươm mầm mơ ước"
+               />
           </>
      );
 }

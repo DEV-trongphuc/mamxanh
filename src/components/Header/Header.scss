@@ -8,27 +8,98 @@
      right: 0;
      z-index: 999;
      padding-bottom: 5px;
-     height: 60px;
+     height: 65px;
      transition: 0.15s ease;
+
      background-color: $mainClr;
      @include flex(center);
+
      @media screen and (max-width: 767px) {
           justify-content: flex-start;
      }
 }
 .header.active {
-     height: 60px;
+     @media screen and (max-width: 767px) {
+          left: 5px;
+          right: 5px;
+     }
+
+     top: 7px;
+     height: 50px;
      transition: 0.15s ease;
-     padding: 30px;
-     box-shadow: 0 0 20px $newMain3;
-     background-image: linear-gradient(145deg, $mainClr, $newMain);
+     padding: 32px;
+     left: 30px;
+     right: 30px;
+     transition: 0.35s ease;
+     border-radius: 100rem;
+     box-shadow: 0 0 3px $TextClr;
+     // background-image: linear-gradient(145deg, $mainClr, $newMain);
+     background-color: rgb(255, 255, 255);
+     // &::before {
+     //      content: "";
+     //      background-color: $newMain;
+     //      width: 100%;
+     //      height: 100%;
+     //      position: absolute;
+     // }
+     & .header__h1 {
+          color: $mainClr;
+     }
+     & .header__bar,
+     .header__barclose {
+          margin-right: 20px;
+          color: $mainClr;
+     }
+     & .header__back {
+          color: $newMain;
+          margin-left: 10px;
+     }
+     @media screen and (max-width: 767px) {
+          & .header__list {
+               background-color: $background;
+               margin-top: 20px;
+               box-shadow: 0 0 5px $newMain;
+          }
+     }
+
+     & .header__list--item {
+          color: $newMain;
+          &.active1 {
+               position: relative;
+
+               &:after {
+                    width: 85%;
+               }
+          }
+          &:after {
+               content: "";
+               position: absolute;
+               bottom: -5px;
+               left: 0;
+               width: 0%;
+               background-color: $newMain;
+               height: 2px;
+               opacity: 0.95;
+               border-radius: 100rem;
+               transition: 0.45s ease;
+          }
+
+          &:hover {
+               color: $mainClr;
+               &:after {
+                    width: 70%;
+               }
+          }
+     }
 }
 .header__scroll {
      position: absolute;
      width: 0%;
      bottom: 0;
      left: 0;
-     height: 5px;
+     height: 4px;
+     border-radius: 100rem;
+     box-shadow: 0 0 7px $newMain3;
      background-color: $newMain3;
 }
 
@@ -45,8 +116,8 @@
      position: fixed;
      left: 50px;
      border: none;
-     font-size: 25px;
-     color: $subClr2;
+     font-size: 20px;
+     color: $background;
 
      @media screen and (max-width: 767px) {
           display: none;
@@ -54,18 +125,24 @@
 }
 
 .header__fixlogo {
-     width: 45px;
-     height: 45px;
+     width: 42px;
+     height: 42px;
      margin-right: 30px;
+     box-shadow: 0 0 3px $mainClr;
+     border-radius: 100rem;
 
      @media screen and (max-width: 767px) {
           display: block;
           position: absolute;
           opacity: 1;
-          top: 7px;
+          top: 12px;
+          box-shadow: 0 0 5px $mainClr;
+          border-radius: 100rem;
           left: 30px;
           z-index: 99;
           margin-right: 0px;
+          width: 35px;
+          height: 35px;
      }
 }
 .header__h1 {
@@ -73,50 +150,65 @@
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
-     color: $activeClr !important;
-     font-size: 20px;
+     color: $background;
+     font-size: 16px;
      display: none;
      @media screen and (max-width: 767px) {
           display: block;
      }
 }
-.header__bar {
+.header__bar,
+.header__barclose {
      color: $activeClr;
      font-size: 30px;
      padding: 20px;
      cursor: pointer;
      display: none;
      position: fixed;
+     transition: 0.15s ease;
      right: 20px;
      @media screen and (max-width: 767px) {
           display: block;
           padding: 10px;
           z-index: 99;
      }
+     &.active1 {
+          opacity: 0;
+     }
+}
+.header__barclose {
+     margin-right: 3px;
+     z-index: -1;
 }
 .header__list.active1 {
      transform: scaleY(1);
 }
 .header__list {
+     &.active1 {
+          transform: scaleY(1);
+     }
      @include flex(center);
      text-decoration: none;
      list-style: none;
      gap: 30px;
      transition: 0.2s ease;
      @media screen and (max-width: 767px) {
+          position: absolute;
+          top: 50px;
+          left: 0;
           transform-origin: 50% 0;
           transform: scaleY(0.00000001);
           flex-direction: column;
           background-color: $mainClr;
           opacity: 0.94;
           width: 100%;
-          margin-top: 320px;
+          // margin-top: 307px;
           gap: 0px;
      }
 
      &--item {
           cursor: pointer;
-          font-size: 15px;
+          font-size: 14px;
           color: white;
           font-weight: 500;
           line-height: 50px;
@@ -143,10 +235,8 @@
      }
      &--item.active1 {
           color: $activeClr;
-          position: relative;
-
           &:after {
-               width: 70%;
+               width: 85%;
           }
      }
 }
