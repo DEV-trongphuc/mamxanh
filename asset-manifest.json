@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/mamxanh/static/css/main.ab85a807.chunk.css",
-    "main.js": "/mamxanh/static/js/main.473b845b.chunk.js",
-    "main.js.map": "/mamxanh/static/js/main.473b845b.chunk.js.map",
+    "main.css": "/mamxanh/static/css/main.743725b6.chunk.css",
+    "main.js": "/mamxanh/static/js/main.7494b058.chunk.js",
+    "main.js.map": "/mamxanh/static/js/main.7494b058.chunk.js.map",
     "runtime-main.js": "/mamxanh/static/js/runtime-main.b35cbba9.js",
     "runtime-main.js.map": "/mamxanh/static/js/runtime-main.b35cbba9.js.map",
     "static/js/2.2ad937ee.chunk.js": "/mamxanh/static/js/2.2ad937ee.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.41f94519.chunk.js": "/mamxanh/static/js/3.41f94519.chunk.js",
     "static/js/3.41f94519.chunk.js.map": "/mamxanh/static/js/3.41f94519.chunk.js.map",
     "index.html": "/mamxanh/index.html",
-    "static/css/main.ab85a807.chunk.css.map": "/mamxanh/static/css/main.ab85a807.chunk.css.map",
+    "static/css/main.743725b6.chunk.css.map": "/mamxanh/static/css/main.743725b6.chunk.css.map",
     "static/js/2.2ad937ee.chunk.js.LICENSE.txt": "/mamxanh/static/js/2.2ad937ee.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b35cbba9.js",
     "static/js/2.2ad937ee.chunk.js",
-    "static/css/main.ab85a807.chunk.css",
-    "static/js/main.473b845b.chunk.js"
+    "static/css/main.743725b6.chunk.css",
+    "static/js/main.7494b058.chunk.js"
   ]
 }
